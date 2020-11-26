@@ -16,6 +16,16 @@
     transition: all .5s;
 }
 
+.section-title{ 
+    color: #ec7532;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    position: relative; 
+}
+
 
 /* HEADER */
 .header{
@@ -120,20 +130,30 @@
     background: white;
 }
 
+.my-carousel .item-1{
+    background: url(../img/hero-1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 800px;
+}
+
+.my-carousel .item-2{
+    background: url(../img/hero-2.jpg) no-repeat center center;
+    background-size: cover;
+    height: 800px;
+}
+
+.my-carousel .item-3{
+    background: url(../img/hero-3.jpg) no-repeat center center;
+    background-size: cover;
+    height: 800px;
+}
+
 /* MOVIE */
 .movie{
     padding-top: 80px;
 }
 
-.movie__title{
-    color: #ec7532;
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 15px;
-    position: relative;
-}
+
 
 .movie__title.line::after{
     width: 170px;
@@ -244,3 +264,66 @@
     text-align: center;
 }
 
+/* COMING SOON */
+.coming{
+    background-color: black;
+}
+
+.coming__bg{
+    padding: 80px 0;
+    background-image: url('../img/slide-3.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.coming__bg .line::after{
+    width: 170px;
+}
+
+.coming__bg .section-title{
+    color: white;
+}
+
+.coming__detail > span{
+    font-size: 14px;
+    color: #ec7532;
+}
+
+.coming__detail h1{
+    font-size: 34px;
+}
+
+.coming__detail .fa-star{
+    font-size: 14px;
+    color: #fbbd61;
+}
+
+.coming__detail a{
+    color: #ec7532;
+    letter-spacing: 3px;
+}
+
+.coming__date{
+    opacity: 0.75;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.coming__trailer{
+    position: relative;
+}
+
+.coming__trailer i{
+    width: 84px;
+    height: 84px;
+    display: block;
+    border: 2px solid #ec7532;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 84px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
