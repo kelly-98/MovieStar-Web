@@ -4,12 +4,39 @@
     font-size: 16px;
 }
 
+.line::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: inline-block;
+    transition: all .5s;
+}
+
+
+/* HEADER */
+.header{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+}
+
+
 .header__detail i, .header__detail span{
     font-size: 14px;
 }
 
 .header__detail span{
     border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.header__navbar .nav-item{
+    position: relative;
 }
 
 .header__navbar .nav-item .nav-link{
@@ -21,15 +48,199 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.header__navbar .nav-item::after{
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    background: linear-gradient(to right, #fbbd61, #ec7532);
-    transition: all .5s;
-}
-
 .header__navbar .nav-item:hover::after, .header__navbar .nav-item.active::after{
     width: 100%;
 }
+
+.header__navbar .nav-item:hover .nav-link.line::after{
+    width: 100%;
+}
+
+.header__navbar .nav-item .nav-link.active.line::after{
+    width: 100%;
+}
+/* CAROUSEL */
+.carousel-item__overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, black, transparent);
+}
+
+.carousel-item__caption{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-item__caption .title{
+    color: #fbbd61;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.carousel-item__caption p{
+    font-size: 18px;
+}
+
+.carousel-item__trailer span{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    line-height: 40px;
+}
+
+.btn-orange{
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    border-radius: 40px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 11px 30px;
+    cursor: pointer;
+}
+
+.my-carousel .carousel-indicators{
+    bottom: 65px;
+    justify-content: start;
+    left: 6rem;
+}
+
+.my-carousel .carousel-indicators li{
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border: 1.5px solid white;
+    border-radius: 50%;
+}
+
+.my-carousel .carousel-indicators li.active{
+    background: white;
+}
+
+/* MOVIE */
+.movie{
+    padding-top: 80px;
+}
+
+.movie__title{
+    color: #ec7532;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.movie__title.line::after{
+    width: 170px;
+}
+
+
+.movie__item{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie__detail{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.movie__detail i{
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 15px auto;
+    line-height: 70px;
+}
+
+.movie__detail a{
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.movie__detail span{
+    font-size: 16px;
+}
+
+.movie__overlay{
+    position: absolute;
+    top: 0;
+    left: -400%;
+    transform: skewX(45deg);
+    background: linear-gradient(to bottom, #fbbd61, #ec7532);
+    width: 300%;
+    height: 100%;
+    transition: all .5s;
+}
+
+.movie__item:hover .movie__overlay{
+    left: -100%;
+}
+
+.movie__item:hover .movie__detail{
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+.movie__name{
+    font-size: 18px;
+    margin: 15px 0 5px;
+}
+
+.movie__star{
+    color: #fbbd61;
+}
+
+
+/* SHOWTIMES */
+.showtimes{
+    padding-top: 80px;
+}
+
+.showtimes__movie img{
+    border-radius: 10px;
+}
+
+.showtimes .nav-tabs .nav-link{
+    position: relative;
+    color: #4a4a4a;
+    padding: 10px 30px;
+}
+
+
+.showtimes .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .showtimes .nav-tabs .nav-link:hover{
+    border: white;
+}
+
+.showtimes .nav-tabs .nav-link.active.line::after, .showtimes .nav-tabs .nav-link:hover.line::after{
+    width: 100%;
+}
+
+
+.showtimes__list i, .showtimes span{
+    font-size: 14px;
+}
+
+.showtimes__length span{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 35px;
+    text-align: center;
+}
+
